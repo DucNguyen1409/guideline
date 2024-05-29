@@ -1,28 +1,5 @@
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://localhost:8444/eureka
-
-server:
-  port: 8445
 spring:
   application:
     name: guidelines
   config:
     import: optional:configserver:http://localhost:8888
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/guidelines
-    username: root
-    password: root
-  jpa:
-    hibernate:
-      ddl-auto: create
-    database: mysql
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-
-application:
-  config:
-    tasks-url: http://localhost:8446/api/v1/tasks
